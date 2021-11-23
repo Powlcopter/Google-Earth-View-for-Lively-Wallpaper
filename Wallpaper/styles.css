@@ -1,0 +1,75 @@
+:root {
+  --imgID: "2418";
+  --bg-image: "./blackBackground.jpg";
+  --next-bg-image: "./blackBackground.jpg";
+  --play-state: visible;
+  --pause-state: hidden;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  background-color: black;
+}
+
+.bg {
+  /* The image used */
+  background-image: var(--bg-image);
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2;
+  transition: background-image 0.75s ease-in-out;
+}
+
+.preload {
+  background-image: var(--next-bg-image);
+  z-index: -1;
+}
+
+.button {
+  position: absolute;
+  background-color:rgba(0, 0, 0, 0.3);
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 1000px;
+  text-align: center;
+  transition: ease-out 0.3s;
+  transition-property: background-color, fill-opacity;
+  right: 1rem;
+}
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  fill: white;
+  fill-opacity: 1;
+}
+.nextButton {
+  bottom: 8rem;
+}
+.favButton {
+  bottom: 4rem;
+}
+.testButton {
+  bottom: 12rem;
+}
+.playButton {
+  bottom: 16rem;
+  visibility: var(--play-state);
+}
+.pauseButton {
+  bottom: 16rem;
+  visibility: var(--pause-state);
+}
+.svg{
+  height: 2rem;
+  width: 2rem;
+  fill: white;
+  fill-opacity: 0.5;
+}
